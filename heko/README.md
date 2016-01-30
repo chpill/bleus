@@ -15,7 +15,7 @@ Then boot it. If you don't have a network cable near you, you can connect via
 wifi. The 15.09 release uses networkmanager by default, so you can use nmtui to
 set up the wifi. To get a graphical session, type `start display-manager`
 (:warning: The touchpad was not activated by default for my laptop, you better
-know some KDE shortcuts!).
+know some KDE shortcuts, or get yourself an old school mouse!).
 
 Partition the disk using [gdisk]:
   1. 50Mo Bios boot partition (`ef02`)
