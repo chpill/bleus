@@ -40,8 +40,9 @@ Mount the target filesystem on which will be installed Nixos: `mount /dev/disk/b
 Now generate yourself a hardware and default configuration:
 `nixos-generate-config --root /mnt`. If you have a custom configuration file,
 you can swap it with the default one. You could easily access it by sharing it
-on pastebin or github. You can install curl with `nix-env -i curl`. Then
-`curl pastebin/raw/xxx > configuration.nix`
+on pastebin or github. You can install curl with `nix-env -i curl` (or wget!).
+Then `curl pastebin/raw/xxx > configuration.nix` or
+`wget https://raw.githubusercontent.com/chpill/bleus/master/heko/configuration.nix`
 
 Whatever you do, you may want to add a user to your configuration, with an
 [initialPassword](https://nixos.org/nixos/manual/options.html#opt-users.users._name__.initialPassword)
