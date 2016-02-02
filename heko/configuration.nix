@@ -13,8 +13,9 @@
   boot.loader.grub = {
     enable = true;
     version = 2;
-    device = "/dev/sda";
-    timeout = 5;
+    # We configure the grub in ubuntu to point to the the entries 
+    # for nixos, but nixos does not install grub itself
+    device = "nodev";
   };
 
   ## Trying to fix the xserver with nvidia driver
@@ -40,13 +41,15 @@
   # $ nix-env -qaP | grep wget
   environment.systemPackages = with pkgs; [
     arandr
+    emacs
     firefox
-    htop
     gitAndTools.gitFull
+    htop
     mtr
     nox
     redshift
     tree
+    vim
     wavemon
     wget
     xcape
