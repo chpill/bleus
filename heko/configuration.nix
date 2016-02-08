@@ -13,7 +13,7 @@
   boot.loader.grub = {
     enable = true;
     version = 2;
-    # We configure the grub in ubuntu to point to the the entries 
+    # We configure the grub in ubuntu to point to the the entries
     # for nixos, but nixos does not install grub itself
     device = "nodev";
   };
