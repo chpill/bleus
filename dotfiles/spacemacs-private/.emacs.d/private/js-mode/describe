@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: describe
+# key: des
+# --
+describe('$3', function () {
+  beforeEach(function () {
+    $1
+  });
+
+  it('$2', function () {
+    $0
+  });
+});

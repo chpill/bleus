@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: early return
+# key: ifr
+# --
+if (${2:err}) return ${1:callback}($2);

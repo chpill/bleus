@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: console plop
+# key: cp
+# --
+console.log('${1:PLOP}');
