@@ -1,0 +1,6 @@
+awesome
+build-essential
+curl
+stow
+tree
+zsh
