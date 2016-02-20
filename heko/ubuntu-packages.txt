@@ -1,7 +1,9 @@
 awesome
 build-essential
 curl
+git
+moreutils
+sshfs
 stow
 tree
-sshfs
 zsh
