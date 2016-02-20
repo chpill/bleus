@@ -1,3 +1,6 @@
 [submodule "spacemacs"]
 	path = dotfiles/spacemacs/.emacs.d
 	url = https://github.com/syl20bnr/spacemacs
+[submodule "oh-my-zsh"]
+	path = lib/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
