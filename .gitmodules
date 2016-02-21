@@ -4,3 +4,6 @@
 [submodule "oh-my-zsh"]
 	path = lib/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "nvm"]
+	path = dotfiles/nvm/.nvm
+	url = https://github.com/creationix/nvm
