@@ -7,3 +7,6 @@
 [submodule "nvm"]
 	path = dotfiles/nvm/.nvm
 	url = https://github.com/creationix/nvm
+[submodule "fzf"]
+	path = dotfiles/fzf/.fzf
+	url = https://github.com/junegunn/fzf
