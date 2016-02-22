@@ -14,4 +14,4 @@ install-fzf: stow-dotfiles
 unstow-dotfiles:
 	cd dotfiles && stow -vD -t ~ *
 
-.PHONY init stow-dotfiles unstow-dotfiles
+.PHONY: init stow-dotfiles unstow-dotfiles

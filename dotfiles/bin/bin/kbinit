@@ -1,0 +1,8 @@
+#!/bin/sh
+
+setxkbmap -layout us -option ctrl:nocaps -option compose:ralt
+# sometimes, the daemon will stop working...
+killall xcape
+~/dotfiles/tools/xcape/xcape -t 100 ms -e 'Control_L=Escape'
+
+redshift -l 48.86:2.35

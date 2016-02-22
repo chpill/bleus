@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Use this script to check some files for dead links.
+#
+# Extract all urls from the file(s) given as argument, then perform
+# curls in parallel to check the response status code
+
+sed -ne 's/.*\(http[^"]*\).*/\1/p' $* |\
+    xargs -n1 -P20 curl -sIL -o/dev/null -w"%{http_code} %{url_effective} \\n"
