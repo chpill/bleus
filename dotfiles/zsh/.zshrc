@@ -52,3 +52,6 @@ source $HOME/.nvm/nvm.sh
 
 # fzf goodies for zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# source nix packet man
+. ./.nix-profile/etc/profile.d/nix.sh
