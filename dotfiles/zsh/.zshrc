@@ -48,7 +48,7 @@ alias killemacs="emacsclient -e \"(progn (setq kill-emacs-hook 'nil) (kill-emacs
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin
 
 # nvm version manager for node, still a necessary evil...
-#source $HOME/.nvm/nvm.sh
+source $HOME/.nvm/nvm.sh
 
 # fzf goodies for zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

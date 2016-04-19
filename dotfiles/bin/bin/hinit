@@ -8,6 +8,9 @@ killall xcape
 xinput set-prop 13 "Synaptics Two-Finger Scrolling" 1, 1
 xinput set-prop 13 "Synaptics Palm Detection" 1
 
-redshift -l 48.86:2.35
+redshift -l 48.86:2.35 &
+
+# avoid having the trackpad go insane while typing
+syndaemon -tk
 
 

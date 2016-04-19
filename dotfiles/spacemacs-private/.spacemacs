@@ -88,7 +88,7 @@ values."
    ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
    ;; uses emacs key bindings for vim's insert mode, but otherwise leaves evil
    ;; unchanged. (default 'vim)
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
@@ -250,9 +250,11 @@ values."
 
 (defun dotspacemacs/user-init ()
   "Initialization function for user code.
-It is called immediately after `dotspacemacs/init'.  You are free to put almost
-any user code here.  The exception is org related code, which should be placed
-in `dotspacemacs/user-config'."
+It is called immediately after `dotspacemacs/init', before layer configuration
+executes.
+ This function is mostly useful for variables that need to be set
+before packages are loaded. If you are unsure, you should try in setting them in
+`dotspacemacs/user-config' first."
   )
 
 (defun dotspacemacs/user-config ()
@@ -260,6 +262,7 @@ in `dotspacemacs/user-config'."
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (global-linum-mode)
+  (setq-default dotspacemacs-smartparens-strict-mode t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -269,6 +272,9 @@ layers configuration. You are free to put any user code."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
+ '(cljr-warn-on-eval nil)
  '(package-selected-packages
    (quote
     (ws-butler spaceline restart-emacs persp-mode orgit lorem-ipsum hl-todo help-fns+ helm-flx helm-company github-clone evil-mc evil-magit evil-lisp-state evil-indent-plus bracketed-paste auto-compile ace-jump-helm-line bind-map web-mode smartparens restclient pcre2el paradox page-break-lines org-pomodoro org-plus-contrib neotree markdown-toc markdown-mode magit-gh-pulls macrostep linum-relative leuven-theme json-mode js2-refactor js2-mode info+ indent-guide hungry-delete highlight-parentheses helm-swoop helm-projectile helm-mode-manager helm-make helm-descbinds helm-c-yasnippet helm-ag google-translate github-browse-file git-timemachine git-messenger gist gh-md flycheck-pos-tip flycheck flx-ido fill-column-indicator exec-path-from-shell evil-surround evil-search-highlight-persist evil-org evil-nerd-commenter evil-matchit evil-jumper evil-exchange evil-escape emmet-mode elisp-slime-nav company-web company-tern company-statistics company-quickhelp coffee-mode clj-refactor cider buffer-move auto-yasnippet align-cljlet aggressive-indent ace-link ac-ispell avy company highlight anzu request helm helm-core magit evil which-key quelpa package-build use-package bind-key s dash spacemacs-theme window-numbering web-completion-data web-beautify volatile-highlights vi-tilde-fringe undo-tree toc-org tagedit spray spinner smooth-scrolling smeargle slim-mode seq scss-mode sass-mode rainbow-delimiters queue powerline pos-tip popwin pkg-info pcache paredit org-repo-todo org-present org-bullets open-junk-file nix-mode move-text mmm-mode magit-gitflow logito log4e let-alist less-css-mode json-snatcher js-doc jade-mode inflections ido-vertical-mode htmlize highlight-numbers highlight-indentation helm-themes helm-nixos-options helm-gitignore helm-css-scss goto-chg golden-ratio gnuplot gntp gitconfig-mode gitattributes-mode git-link fancy-battery expand-region evil-visualstar evil-tutor evil-numbers evil-leader evil-indent-textobject evil-iedit-state evil-args evil-anzu edn define-word dash-functional company-nixos-options clean-aindent-mode cider-eval-sexp-fu auto-highlight-symbol auto-dictionary adaptive-wrap ace-window))))
