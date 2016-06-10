@@ -93,6 +93,11 @@
   svpush = !git-svn dcommit
 	gnap = 'git add . -N && git add --patch'
 
+  ; use --force-with-lease instead of --force, it will check that the remote ref
+  ; and the the true remote are the same before push --force (to make sure no
+  ; commit has been added there since the rebase).
+	pushf = push --force-with-lease
+
 ;[apply]
   ;whitespace = nowarn
 
@@ -176,3 +181,5 @@
   submodulesummary = true
 [remote "origin"]
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
+[github]
+	user = chpill

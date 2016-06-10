@@ -3,6 +3,10 @@
 setxkbmap -layout us -option ctrl:nocaps -option compose:ralt
 # sometimes, the daemon will stop working...
 killall xcape
-~/dotfiles/tools/xcape/xcape -t 100 ms -e 'Control_L=Escape'
+xcape -t 100 -e 'Control_L=Escape'
+
+# disable beeps
+xset -b
 
 redshift -l 48.86:2.35
+
