@@ -222,7 +222,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -269,7 +269,6 @@ the code and restart the system"
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  (global-linum-mode)
   (setq-default dotspacemacs-smartparens-strict-mode t)
   (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "a" 'duct-refresh))
   ;; FIXME this does not work, because in clojurescript-mode,
