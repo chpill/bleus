@@ -262,6 +262,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   "When developing with duct, this stops the system currently running, reloads
 the code and restart the system"
   (interactive)
+  (save-buffer)
   (cider-interactive-eval "(require 'dev)(in-ns 'dev)(reset)"))
 
 (defun dotspacemacs/user-config ()
@@ -270,7 +271,10 @@ This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (global-linum-mode)
   (setq-default dotspacemacs-smartparens-strict-mode t)
-  (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "C-a" 'duct-refresh))
+  (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "a" 'duct-refresh))
+  ;; FIXME this does not work, because in clojurescript-mode,
+  ;; cider-interactive-eval wants a cljs repl...
+  ;;(spacemacs/set-leader-keys-for-major-mode 'clojurescript-mode "a" 'duct-refresh))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
