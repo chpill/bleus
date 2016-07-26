@@ -160,9 +160,11 @@
 
 
 # See http://robots.thoughtbot.com/post/27695057156/clone-me-maybe
-[url "git://github.com/"]
-  # Read-only
+[url "git@github.com:"]
   insteadOf = gh:
+
+[url "git@bitbucket.com:"]
+	insteadOf = bb:
 
 [user]
   name = chpill
