@@ -268,6 +268,7 @@ the code and restart the system"
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
   (setq-default dotspacemacs-smartparens-strict-mode t)
+  (setq projectile-create-missing-test-files t)
   (spacemacs/set-leader-keys-for-major-mode 'clojure-mode "a" 'duct-refresh))
   ;; FIXME this does not work, because in clojurescript-mode,
   ;; cider-interactive-eval wants a cljs repl...
