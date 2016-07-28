@@ -44,6 +44,8 @@ alias e='emacsclient --tty\
 
 alias killemacs="emacsclient -e \"(progn (setq kill-emacs-hook 'nil) (kill-emacs))\""
 
+function mcd () mkdir -p $1 && cd $1
+
 # PATH
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/bin
 

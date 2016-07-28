@@ -55,12 +55,21 @@ values."
    ;; the list `dotspacemacs-configuration-layers'. (default t)
    dotspacemacs-delete-orphan-packages t))
 
-;; indent level for js files
-(setq-default js2-basic-offset 2)
-;; for json files
-(setq-default js-indent-level 2)
-;; only interested in the current buffer for avy jumps!!
-(setq-default avy-all-windows nil)
+(setq-default
+ ;; indent levels
+ ;; js files
+ js2-basic-offset 2
+ ;; for json files
+ js-indent-level 2
+ ;; web-mode
+ css-indent-offset 2
+ web-mode-markup-indent-offset 2
+ web-mode-css-indent-offset 2
+ web-mode-code-indent-offset 2
+ web-mode-attr-indent-offset 2
+
+ ;; only interested in the current buffer for avy jumps!!
+ avy-all-windows nil)
 
 (defun dotspacemacs/init ()
   "Initialization function.
