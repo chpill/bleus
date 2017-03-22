@@ -90,6 +90,8 @@
         (sf/highlight (- (point) l) (point))))))
 
 (defun sf/reset ()
+  ;; NOT IN ORIGINAL, ADDED FOR CONVENIENCE
+  (interactive)
   (remove-overlays nil nil 'sf/hidden t)
   (remove-overlays nil nil 'sf/highlight t)
   (symbol-focus-mode 0))
