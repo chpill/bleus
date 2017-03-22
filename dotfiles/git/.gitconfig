@@ -142,7 +142,7 @@
 
 [core]
   editor = vim
-  pager  = less -FRSX
+  pager = less -+F
   excludesfile = /home/chpill/b/lib/gitignore-global
 
 [push]
@@ -179,8 +179,6 @@
 [web]
   browser = firefox
 
-[status]
-  submodulesummary = true
 [remote "origin"]
 	fetch = +refs/pull/*/head:refs/remotes/origin/pr/*
 [github]
